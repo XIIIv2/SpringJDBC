@@ -39,7 +39,7 @@ public class App {
 
         Customer customer = customerDao.fetchById(3L).orElse(null);
         if (customer != null) {
-            System.out.println("Found customer: " + customer);
+            System.out.println("Found customer by ID: " + customer);
             customer.setEmail("new.email@example.com");
             if (customerDao.updateById(customer.getId(), new CustomerDtoRequest(
                     customer.getId(),
